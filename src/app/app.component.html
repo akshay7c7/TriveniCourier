@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+    <div class="s010">
+      <form>
+        <div class="inner-form">
+          <div class="basic-search">
+            <div class="input-field">
+              <input id="search" type="text" placeholder="Enter your Tracking Id" />
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="result-count">
+              <span> </span></div>
+            <div class="group-btn">
+              <button class="btn-search" id="delete">RESET</button>
+              <button class="btn-search"  (click)="TrackPackage()">SEARCH</button>
+            </div>
+          </div>
+          <div class="advance-search" *ngIf="showTracking">
+            <div class="row third">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    
