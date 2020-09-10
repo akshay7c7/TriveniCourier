@@ -1,25 +1,238 @@
-<app-navbar></app-navbar>
-    <div class="s010">
-      <form>
-        <div class="inner-form">
-          <div class="basic-search">
-            <div class="input-field">
-              <input id="search" type="text" placeholder="Enter your Tracking Id" />
-            </div>
-          </div>
-          <div class="input-field">
-            <div class="result-count">
-              <span> </span></div>
-            <div class="group-btn">
-              <button class="btn-search" id="delete">RESET</button>
-              <button class="btn-search"  (click)="TrackPackage()">SEARCH</button>
-            </div>
-          </div>
-          <div class="advance-search" *ngIf="showTracking">
-            <div class="row third">
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+<!DOCTYPE html>
+<html>
     
+<!-- Mirrored from event-theme.com/themes/GO-Courier/tracking.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Sep 2020 11:27:40 GMT -->
+<head>
+        <title>Tracking / GO Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     
+    </head>
+    <body id="home">
+
+        <!-- Main Wrapper -->        
+        <main class="wrapper">
+
+            <!-- Header -->
+            <header class="header-main">
+
+                <!-- Header Topbar -->
+                <div class="top-bar font2-title1 white-clr">
+                    <div class="theme-container container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-5">
+                                <ul class="list-items fs-10">
+                                    <li><a href="#">About Us</a></li>
+                                    <li class="active"><a href="#">Tracking</a></li>
+                                    <li><a href="#">Connect with us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-sm-7 fs-12">
+                                <p class="contact-num">  <i class="fa fa-phone"></i> Call us now: <span class="theme-clr"> +91 7718018010</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a data-toggle="modal" href="#login-popup" class="sign-in fs-12 theme-clr-bg"> sign in </a>
+                </div>
+                <!-- /.Header Topbar -->
+
+                <!-- Header Logo & Navigation -->
+                
+                <!-- /.Header Logo & Navigation -->
+
+            </header>
+            <!-- /.Header -->
+            <app-navbar></app-navbar>
+            <!-- Content Wrapper -->
+            <article> 
+                <!-- Breadcrumb -->
+                <section class="theme-breadcrumb pad-50">                
+                    <div class="theme-container container ">  
+                        <div class="row">
+                            <div class="col-sm-8 pull-left">
+                                <div class="title-wrap">
+                                    <h2 class="section-title no-margin"> product tracking </h2>
+                                    <p class="fs-16 no-margin"> track your product & see the current condition </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">                        
+                                <ol class="breadcrumb-menubar list-inline">
+                                    <li><a href="#" class="gray-clr">Home</a></li>                                   
+                                    <li class="active">Track</li>
+                                </ol>
+                            </div>  
+                        </div>
+                    </div>
+                </section>
+                <!-- /.Breadcrumb -->
+
+                <!-- Tracking -->
+                <section class="pt-50 pb-120 tracking-wrap">    
+                    <div class="theme-container container ">  
+                        <div class="row pad-10">
+                            <div class="col-md-8 col-md-offset-2 tracking-form wow fadeInUp" data-wow-offset="50" data-wow-delay=".30s">     
+                                <h2 class="title-1"> Track your Product </h2> <span class="font2-light fs-12">Now you can track your product easily</span>
+                                <div class="row">
+                                    <form class="">
+                                        <div class="col-md-7 col-sm-7">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Enter your product ID" required="" class="form-control box-shadow">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-sm-5">
+                                            <div class="form-group">
+                                                <button class="btn-1" (click)="getOrderDetails()">track your product</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7 pad-30 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".30s"> 
+                                <img alt="" src="assets/img/block/product-1.jpg" />
+                            </div>
+                            <div class="col-md-5 pad-30 wow fadeInRight" data-wow-offset="50" data-wow-delay=".30s"> 
+                                <div class="prod-info white-clr">
+                                    <ul>
+                                        <li> <span class="title-2">Product Name:</span> <span class="fs-16">iPhone 6 Boxed</span> </li>
+                                        <li> <span class="title-2">Product id:</span> <span class="fs-16">9034215</span> </li>
+                                        <li> <span class="title-2">order date:</span> <span class="fs-16">21st Feb, 2016</span> </li>
+                                        <li> <span class="title-2">order status:</span> <span class="fs-16 theme-clr">On Process</span> </li>
+                                        <li> <span class="title-2">weight (kg):</span> <span class="fs-16">0.85 KG</span> </li>
+                                        <li> <span class="title-2">order type:</span> <span class="fs-16">Basic ($50)</span> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <app-progress></app-progress>
+                    </div>
+                </section>
+                <!-- /.Tracking -->
+
+            </article>
+            <!-- /.Content Wrapper -->
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-main pad-120 white-clr">
+                    <div class="theme-container container">               
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 footer-widget">
+                                <a href="#"> <img class="logo" alt="#" src="assets/img/logo/logo-white.png" />  </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 footer-widget">
+                                <h2 class="title-1 fw-900">quick links</h2>
+                                <ul>
+                                    <li> <a href="#">sitemap</a> </li>
+                                    <li> <a href="#">pricing</a> </li>
+                                    <li> <a href="#">payment method</a> </li>
+                                    <li> <a href="#">support</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-6 footer-widget">
+                                <h2 class="title-1 fw-900">important links</h2>
+                                <ul>
+                                    <li> <a href="#">themeforest</a> </li>
+                                    <li> <a href="#">envato</a> </li>
+                                    <li> <a href="#">audiojungle</a> </li>
+                                    <li> <a href="#">videohibe</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-6 footer-widget">
+                                <h2 class="title-1 fw-900">get in touch</h2>
+                                <ul class="social-icons list-inline">
+                                    <li> <a href="#" class="fa fa-facebook"></a> </li>
+                                    <li> <a href="#" class="fa fa-twitter"></a> </li>
+                                    <li> <a href="#" class="fa fa-google-plus"></a> </li>
+                                    <li> <a href="#" class="fa fa-linkedin"></a> </li>
+                                </ul>
+                                <ul class="payment-icons list-inline">
+                                    <li> <a href="#"> <img alt="#" src="assets/img/icons/payment-1.png" /> </a> </li>
+                                    <li> <a href="#"> <img alt="#" src="assets/img/icons/payment-2.png" /> </a> </li>
+                                    <li> <a href="#"> <img alt="#" src="assets/img/icons/payment-3.png" /> </a> </li>
+                                    <li> <a href="#"> <img alt="#" src="assets/img/icons/payment-4.png" /> </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="theme-container container">               
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <p> © Copyright 2016, All rights reserved </p>                            
+                            </div>
+                            <div class="col-md-6 col-sm-6 text-right">
+                                <p> Design and <span class="theme-clr fa fa-heart"></span>  by <a href="#" class="main-clr"> jThemes Studio </a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /.Footer -->
+
+
+        </main>
+        <!-- / Main Wrapper -->
+
+        <!-- Top -->
+        <div class="to-top theme-clr-bg transition"> <i class="fa fa-angle-up"></i> </div>
+
+        <!-- Popup: Login -->
+        <div class="modal fade login-popup" id="login-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">                
+                <a class="close close-btn" data-dismiss="modal" aria-label="Close"> x </a>
+
+                <div class="modal-content">   
+                    <div class="login-wrap text-center">                        
+                        <h2 class="title-3"> sign in </h2>
+                        <p> Sign in to <strong> GO </strong> for getting all details </p>                        
+
+                        <div class="login-form clrbg-before">
+                            <form class="login">
+                                <div class="form-group"><input type="text" placeholder="Email address" class="form-control"></div>
+                                <div class="form-group"><input type="password" placeholder="Password" class="form-control"></div>
+                                <div class="form-group">
+                                    <button class="btn-1 " type="submit"> Sign in now </button>
+                                </div>
+                            </form>
+                            <a href="#" class="gray-clr"> Forgot Passoword? </a>                            
+                        </div>                        
+                    </div>
+                    <div class="create-accnt">
+                        <a href="#" class="white-clr"> Don’t have an account? </a>  
+                        <h2 class="title-2"> <a href="#" class="green-clr under-line">Create a free account</a> </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Popup: Login --> 
+
+        <!-- Search Popup -->
+        <div class="search-popup">
+            <div>
+                <div class="popup-box-inner">
+                    <form>
+                        <input class="search-query" type="text" placeholder="Search and hit enter" />
+                    </form>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="close-search"><i class="fa fa-close"></i></a>
+        </div>
+        <!-- / Search Popup -->
+
+        <!-- Main Jquery JS -->
+         
+
+        <!-- Slider JS -->        
+
+
+        <!-- Theme JS -->
+     
+    </body>
+
+<!-- Mirrored from event-theme.com/themes/GO-Courier/tracking.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Sep 2020 11:27:44 GMT -->
+</html>

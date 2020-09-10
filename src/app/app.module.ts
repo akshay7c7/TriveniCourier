@@ -4,16 +4,20 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProgressComponent } from './progress/progress.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-    NavbarComponent
-  ],
+    NavbarComponent,
+    ProgressComponent
+   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [],

@@ -24,9 +24,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/plugins/bootstrap-3.3.6/css/bootstrap.min.css",
+              "src/assets/plugins/bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css",
+              "src/assets/plugins/font-awesome-4.6.1/css/font-awesome.min.css",
+              "src/assets/plugins/font-elegant/elegant.css",
+              "src/assets/plugins/owl.carousel.2/assets/owl.carousel.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/theme.css"
+
+              
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-2.2.4.min.js",
+              "src/assets/plugins/bootstrap-3.3.6/js/bootstrap.min.js",
+              "src/assets/plugins/bootstrap-select-1.10.0/dist/js/bootstrap-select.min.js",
+              "src/assets/plugins/owl.carousel.2/owl.carousel.min.js",
+              "src/assets/js/jquery.sticky.js",
+              "src/assets/plugins/WOW-master/dist/wow.min.js",
+              "src/assets/js/theme.js"
+            ]
           },
           "configurations": {
             "production": {
