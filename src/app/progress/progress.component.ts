@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShipmentDataService } from '../ShipmentData.service';
 
 @Component({
   selector: 'app-progress',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shipService : ShipmentDataService) { }
 
+  origin:string;
+  destination :string;
+  
   ngOnInit() {
+
+  this.origin = this.shipService.OriginCity;
+  this.destination = this.shipService.DestinationCity;
+
   }
 
 }

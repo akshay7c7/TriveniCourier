@@ -16,11 +16,25 @@ export class AppComponent implements OnInit{
     
   }
 
- orderId : number
+ orderId : number;
+ OriginCity;string;
+ DestinationCity:string;
+ status:any;
 
 
   getOrderDetails()
   {
-      this.shipService.getOrderDetails(this.orderId);
+      return this.shipService.getOrderDetails(this.orderId)
+      .subscribe(
+        data => {
+          console.log(data['ShipmentData'][0]['Shipment']['Origin']);
+          console.log(data['ShipmentData'][0]['Shipment']['Status']);
+          console.log(data['ShipmentData'][0]['Shipment']['Destination']);
+          
+          this.OriginCity = data['ShipmentData'][0]['Shipment']['Origin'];
+          this.DestinationCity = data['ShipmentData'][0]['Shipment']['Destination'];
+          this.status = data['ShipmentData'][0]['Shipment']['Status']['StatusLocation'];
+        }
+      )
   }
 }
