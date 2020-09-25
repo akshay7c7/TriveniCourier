@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ShipmentDataService } from './ShipmentData.service';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ProgressComponent } from './progress/progress.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     
   }
-  constructor(private shipService : ShipmentDataService) {
+  constructor(private shipService : ShipmentDataService, private dialog : MatDialog) {
     
   }
 
@@ -23,7 +25,12 @@ export class AppComponent implements OnInit{
 
 
   getOrderDetails()
-  {
+  {const dialogCongif = new MatDialogConfig();
+    dialogCongif.autoFocus = true;
+    dialogCongif.width = "400px";
+    dialogCongif.height = "400px";
+    //dialogCongif.data = element.id;
+    this.dialog.open(ProgressComponent, dialogCongif);
       return this.shipService.getOrderDetails(this.orderId)
       .subscribe(
         data => {

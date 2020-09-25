@@ -1,7 +1,7 @@
 {
-    "/api/": {
-        "target": "https://track.delhivery.com",
-        "secure": true,
+    "/api/*": {
+        "target": "http://track.delhivery.com",
+        "secure": false,
         "logLevel": "debug",
         "changeOrigin": true
        

@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
               "src/assets/plugins/bootstrap-3.3.6/css/bootstrap.min.css",
               "src/assets/plugins/bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css",
@@ -32,8 +33,6 @@
               "src/assets/plugins/owl.carousel.2/assets/owl.carousel.css",
               "src/assets/css/animate.css",
               "src/assets/css/theme.css"
-
-              
             ],
             "scripts": [
               "src/assets/js/jquery-2.2.4.min.js",
@@ -106,6 +105,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -137,6 +137,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "TriveniCourier"
 }

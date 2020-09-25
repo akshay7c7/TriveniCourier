@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProgressComponent } from './progress/progress.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'material.module';
 
 @NgModule({
   declarations: [	
@@ -17,10 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
     
   ],
   providers: [],
+  entryComponents:[ProgressComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
